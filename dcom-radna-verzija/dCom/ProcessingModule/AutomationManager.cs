@@ -156,9 +156,14 @@ namespace ProcessingModule
 					int emptyMixerValue = 100;
 					if (points[6].RawValue != 0)
 					{
-						value -= emptyMixerValue;
+						if(value < emptyMixerValue)
+						{
+							emptyMixerValue = value;
+						}
 
-						if(value == 0)
+                        value -= emptyMixerValue;
+
+                        if (value == 0)
 						{
                             processingManager.ExecuteWriteCommand(points[6].ConfigItem, configuration.GetTransactionId(), configuration.UnitAddress, 4003, 0);
                         }
@@ -181,14 +186,23 @@ namespace ProcessingModule
                         value += water;
                     }
 
+					if (value != initValue) {
+						value = (int)eguConverter.ConvertToRaw(points[0].ConfigItem.ScaleFactor, points[0].ConfigItem.Deviation, points[0].RawValue);
+                        processingManager.ExecuteWriteCommand(points[0].ConfigItem, configuration.GetTransactionId(), configuration.UnitAddress, 1000, value);
+                    }
 
+					if(value > points[0].ConfigItem.HighLimit)
+					{
+						if (points[3].RawValue != 0)
+							processingManager.ExecuteWriteCommand(points[3].ConfigItem, configuration.GetTransactionId(), configuration.UnitAddress, 4000, 0);
+						if (points[4].RawValue != 0)
+							processingManager.ExecuteWriteCommand(points[4].ConfigItem, configuration.GetTransactionId(), configuration.UnitAddress, 4001, 0);
+						if (points[5].RawValue != 0)
+							processingManager.ExecuteWriteCommand(points[5].ConfigItem, configuration.GetTransactionId(), configuration.UnitAddress, 4002, 0);
 
-
-
-
-
-
-
+						if (points[6].RawValue != 1)
+							processingManager.ExecuteWriteCommand(points[6].ConfigItem, configuration.GetTransactionId(), configuration.UnitAddress, 4003, 1);
+                    }
 
                     automationTrigger.WaitOne(1000);
 				}

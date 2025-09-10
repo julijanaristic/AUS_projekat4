@@ -1,5 +1,6 @@
 ﻿using Common;
 using System;
+using System.Collections.Generic;
 using System.Threading;
 
 namespace ProcessingModule
@@ -60,9 +61,62 @@ namespace ProcessingModule
 
 		private void AutomationWorker_DoWork()
 		{
-			//while (!disposedValue)
-			//{
-			//}
+			EGUConverter eguConverter = new EGUConverter();
+
+			PointIdentifier analogOut = new PointIdentifier(PointType.ANALOG_OUTPUT, 1000);
+			PointIdentifier digitalOut1 = new PointIdentifier(PointType.DIGITAL_OUTPUT, 3000);
+			PointIdentifier digitalOut2 = new PointIdentifier(PointType.DIGITAL_OUTPUT, 3001);
+			PointIdentifier digitalOut3 = new PointIdentifier(PointType.DIGITAL_OUTPUT, 4000); // v1
+			PointIdentifier digitalOut4 = new PointIdentifier(PointType.DIGITAL_OUTPUT, 4001); // v2
+			PointIdentifier digitalOut5 = new PointIdentifier(PointType.DIGITAL_OUTPUT, 4002); // v2
+			PointIdentifier digitalOut6 = new PointIdentifier(PointType.DIGITAL_OUTPUT, 4003); // v4
+
+			List<PointIdentifier> pointList = new List<PointIdentifier> { analogOut, digitalOut1, digitalOut2, digitalOut3, digitalOut4, digitalOut5, digitalOut6};
+
+			while (!disposedValue)
+			{
+				List<IPoint> points = storage.GetPoints(pointList);
+				int initValue = (int)eguConverter.ConvertToEGU(points[0].ConfigItem.ScaleFactor, points[0].ConfigItem.Deviation, points[0].RawValue); // pogledati posljednji parametar
+				int value = initValue;
+
+				if (points[1].RawValue == 1)
+				{
+					if (points[3].RawValue != 1)
+					{
+						processingManager.ExecuteWriteCommand(points[3].ConfigItem, configuration.GetTransactionId(), configuration.UnitAddress, 4000, 1);
+					}
+
+					int chocolate = 50;
+					int milk = 50;
+					int water = 30;
+
+					if (points[3].RawValue == 1)
+					{
+						value += chocolate;
+					}
+					else if (points[4].RawValue == 1)
+					{
+						value += milk;
+					}
+					else if (points[5].RawValue == 1)
+					{
+						value += water;
+					}
+
+					if(value == 100)
+					{
+						if (points[3].RawValue != 0)
+						{
+							processingManager.ExecuteWriteCommand(points[3].ConfigItem, configuration.GetTransactionId(), configuration.UnitAddress, 4000, 0);
+						}
+
+						if (points[3].RawValue != 1)
+						{
+                            processingManager.ExecuteWriteCommand(points[3].ConfigItem, configuration.GetTransactionId(), configuration.UnitAddress, 4000, 1);
+                        }
+                    }
+				}
+			}
 		}
 
 		#region IDisposable Support

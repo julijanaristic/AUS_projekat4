@@ -1,17 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\KorisniK\\Downloads\\scada-2025\\scada-2025\\dcom-radna-verzija\\dCom\\",
+  "WorkspaceRootPath": "C:\\Users\\KorisniK\\Documents\\GitHub\\AUS_projekat4\\dcom-radna-verzija\\dCom\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B5697AB8-53AC-4230-9B79-E43A6AA54436}|dCom\\dCom.csproj|C:\\Users\\KorisniK\\Downloads\\scada-2025\\scada-2025\\dcom-radna-verzija\\dCom\\dcom\\rtucfg.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{B5697AB8-53AC-4230-9B79-E43A6AA54436}|dCom\\dCom.csproj|c:\\users\\korisnik\\documents\\github\\aus_projekat4\\dcom-radna-verzija\\dcom\\dcom\\rtucfg.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{B5697AB8-53AC-4230-9B79-E43A6AA54436}|dCom\\dCom.csproj|solutionrelative:dcom\\rtucfg.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5697AB8-53AC-4230-9B79-E43A6AA54436}|dCom\\dCom.csproj|C:\\Users\\KorisniK\\Downloads\\scada-2025\\scada-2025\\dcom-radna-verzija\\dCom\\dcom\\configuration\\configitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{65B26E48-3A6C-4BC4-AF16-F77809B5AFA2}|Modbus\\Modbus.csproj|C:\\Users\\KorisniK\\Documents\\GitHub\\AUS_projekat4\\dcom-radna-verzija\\dCom\\modbus\\modbusfunctions\\readcoilsfunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65B26E48-3A6C-4BC4-AF16-F77809B5AFA2}|Modbus\\Modbus.csproj|solutionrelative:modbus\\modbusfunctions\\readcoilsfunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5697AB8-53AC-4230-9B79-E43A6AA54436}|dCom\\dCom.csproj|C:\\Users\\KorisniK\\Documents\\GitHub\\AUS_projekat4\\dcom-radna-verzija\\dCom\\dcom\\configuration\\configitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5697AB8-53AC-4230-9B79-E43A6AA54436}|dCom\\dCom.csproj|solutionrelative:dcom\\configuration\\configitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{65B26E48-3A6C-4BC4-AF16-F77809B5AFA2}|Modbus\\Modbus.csproj|c:\\users\\korisnik\\downloads\\scada-2025\\scada-2025\\dcom-radna-verzija\\dcom\\modbus\\modbusfunctions\\readdiscreteinputsfunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{65B26E48-3A6C-4BC4-AF16-F77809B5AFA2}|Modbus\\Modbus.csproj|C:\\Users\\KorisniK\\Documents\\GitHub\\AUS_projekat4\\dcom-radna-verzija\\dCom\\modbus\\modbusfunctions\\readdiscreteinputsfunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{65B26E48-3A6C-4BC4-AF16-F77809B5AFA2}|Modbus\\Modbus.csproj|solutionrelative:modbus\\modbusfunctions\\readdiscreteinputsfunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -22,46 +26,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ReadCoilsFunction.cs",
+              "DocumentMoniker": "C:\\Users\\KorisniK\\Documents\\GitHub\\AUS_projekat4\\dcom-radna-verzija\\dCom\\Modbus\\ModbusFunctions\\ReadCoilsFunction.cs",
+              "RelativeDocumentMoniker": "Modbus\\ModbusFunctions\\ReadCoilsFunction.cs",
+              "ToolTip": "C:\\Users\\KorisniK\\Documents\\GitHub\\AUS_projekat4\\dcom-radna-verzija\\dCom\\Modbus\\ModbusFunctions\\ReadCoilsFunction.cs",
+              "RelativeToolTip": "Modbus\\ModbusFunctions\\ReadCoilsFunction.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T15:33:26.243Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "RtuCfg.txt",
-              "DocumentMoniker": "C:\\Users\\KorisniK\\Downloads\\scada-2025\\scada-2025\\dcom-radna-verzija\\dCom\\dCom\\RtuCfg.txt",
+              "DocumentMoniker": "C:\\Users\\KorisniK\\Documents\\GitHub\\AUS_projekat4\\dcom-radna-verzija\\dCom\\dCom\\RtuCfg.txt",
               "RelativeDocumentMoniker": "dCom\\RtuCfg.txt",
-              "ToolTip": "C:\\Users\\KorisniK\\Downloads\\scada-2025\\scada-2025\\dcom-radna-verzija\\dCom\\dCom\\RtuCfg.txt",
+              "ToolTip": "C:\\Users\\KorisniK\\Documents\\GitHub\\AUS_projekat4\\dcom-radna-verzija\\dCom\\dCom\\RtuCfg.txt",
               "RelativeToolTip": "dCom\\RtuCfg.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2025-08-18T14:21:19.89Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ConfigItem.cs",
-              "DocumentMoniker": "C:\\Users\\KorisniK\\Downloads\\scada-2025\\scada-2025\\dcom-radna-verzija\\dCom\\dCom\\Configuration\\ConfigItem.cs",
+              "DocumentMoniker": "C:\\Users\\KorisniK\\Documents\\GitHub\\AUS_projekat4\\dcom-radna-verzija\\dCom\\dCom\\Configuration\\ConfigItem.cs",
               "RelativeDocumentMoniker": "dCom\\Configuration\\ConfigItem.cs",
-              "ToolTip": "C:\\Users\\KorisniK\\Downloads\\scada-2025\\scada-2025\\dcom-radna-verzija\\dCom\\dCom\\Configuration\\ConfigItem.cs",
+              "ToolTip": "C:\\Users\\KorisniK\\Documents\\GitHub\\AUS_projekat4\\dcom-radna-verzija\\dCom\\dCom\\Configuration\\ConfigItem.cs",
               "RelativeToolTip": "dCom\\Configuration\\ConfigItem.cs",
-              "ViewState": "AgIAACEBAAAAAAAAAAAAACEBAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAACQBAAAAAAAAAAAQwEYBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T14:20:25.489Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T14:20:25.489Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ReadDiscreteInputsFunction.cs",
-              "DocumentMoniker": "C:\\Users\\KorisniK\\Downloads\\scada-2025\\scada-2025\\dcom-radna-verzija\\dCom\\Modbus\\ModbusFunctions\\ReadDiscreteInputsFunction.cs",
+              "DocumentMoniker": "C:\\Users\\KorisniK\\Documents\\GitHub\\AUS_projekat4\\dcom-radna-verzija\\dCom\\Modbus\\ModbusFunctions\\ReadDiscreteInputsFunction.cs",
               "RelativeDocumentMoniker": "Modbus\\ModbusFunctions\\ReadDiscreteInputsFunction.cs",
-              "ToolTip": "C:\\Users\\KorisniK\\Downloads\\scada-2025\\scada-2025\\dcom-radna-verzija\\dCom\\Modbus\\ModbusFunctions\\ReadDiscreteInputsFunction.cs",
+              "ToolTip": "C:\\Users\\KorisniK\\Documents\\GitHub\\AUS_projekat4\\dcom-radna-verzija\\dCom\\Modbus\\ModbusFunctions\\ReadDiscreteInputsFunction.cs",
               "RelativeToolTip": "Modbus\\ModbusFunctions\\ReadDiscreteInputsFunction.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T14:17:50.214Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T14:17:50.214Z"
             }
           ]
         }

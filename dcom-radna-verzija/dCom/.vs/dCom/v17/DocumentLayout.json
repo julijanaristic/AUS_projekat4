@@ -1,13 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\KorisniK\\Documents\\GitHub\\AUS_projekat4\\dcom-radna-verzija\\dCom\\",
+  "WorkspaceRootPath": "C:\\Users\\Korisnik\\OneDrive\\Desktop\\AUS_projekat4\\dcom-radna-verzija\\dCom\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A61FACB3-147E-4FD9-88C1-A3F226157C23}|ProcessingModule\\ProcessingModule.csproj|c:\\users\\korisnik\\documents\\github\\aus_projekat4\\dcom-radna-verzija\\dcom\\processingmodule\\processingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A61FACB3-147E-4FD9-88C1-A3F226157C23}|ProcessingModule\\ProcessingModule.csproj|c:\\users\\korisnik\\onedrive\\desktop\\aus_projekat4\\dcom-radna-verzija\\dcom\\processingmodule\\alarmprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A61FACB3-147E-4FD9-88C1-A3F226157C23}|ProcessingModule\\ProcessingModule.csproj|solutionrelative:processingmodule\\alarmprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A61FACB3-147E-4FD9-88C1-A3F226157C23}|ProcessingModule\\ProcessingModule.csproj|c:\\users\\korisnik\\onedrive\\desktop\\aus_projekat4\\dcom-radna-verzija\\dcom\\processingmodule\\processingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A61FACB3-147E-4FD9-88C1-A3F226157C23}|ProcessingModule\\ProcessingModule.csproj|solutionrelative:processingmodule\\processingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A61FACB3-147E-4FD9-88C1-A3F226157C23}|ProcessingModule\\ProcessingModule.csproj|c:\\users\\korisnik\\documents\\github\\aus_projekat4\\dcom-radna-verzija\\dcom\\processingmodule\\eguconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A61FACB3-147E-4FD9-88C1-A3F226157C23}|ProcessingModule\\ProcessingModule.csproj|C:\\Users\\Korisnik\\OneDrive\\Desktop\\AUS_projekat4\\dcom-radna-verzija\\dCom\\processingmodule\\eguconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A61FACB3-147E-4FD9-88C1-A3F226157C23}|ProcessingModule\\ProcessingModule.csproj|solutionrelative:processingmodule\\eguconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -23,28 +27,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AlarmProcessor.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\OneDrive\\Desktop\\AUS_projekat4\\dcom-radna-verzija\\dCom\\ProcessingModule\\AlarmProcessor.cs",
+              "RelativeDocumentMoniker": "ProcessingModule\\AlarmProcessor.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\OneDrive\\Desktop\\AUS_projekat4\\dcom-radna-verzija\\dCom\\ProcessingModule\\AlarmProcessor.cs",
+              "RelativeToolTip": "ProcessingModule\\AlarmProcessor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T17:16:54.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "ProcessingManager.cs",
-              "DocumentMoniker": "C:\\Users\\KorisniK\\Documents\\GitHub\\AUS_projekat4\\dcom-radna-verzija\\dCom\\ProcessingModule\\ProcessingManager.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\OneDrive\\Desktop\\AUS_projekat4\\dcom-radna-verzija\\dCom\\ProcessingModule\\ProcessingManager.cs",
               "RelativeDocumentMoniker": "ProcessingModule\\ProcessingManager.cs",
-              "ToolTip": "C:\\Users\\KorisniK\\Documents\\GitHub\\AUS_projekat4\\dcom-radna-verzija\\dCom\\ProcessingModule\\ProcessingManager.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\OneDrive\\Desktop\\AUS_projekat4\\dcom-radna-verzija\\dCom\\ProcessingModule\\ProcessingManager.cs",
               "RelativeToolTip": "ProcessingModule\\ProcessingManager.cs",
-              "ViewState": "AgIAAJMAAAAAAAAAAAAIwJsAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-10T17:11:02.402Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "EGUConverter.cs",
-              "DocumentMoniker": "C:\\Users\\KorisniK\\Documents\\GitHub\\AUS_projekat4\\dcom-radna-verzija\\dCom\\ProcessingModule\\EGUConverter.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\OneDrive\\Desktop\\AUS_projekat4\\dcom-radna-verzija\\dCom\\ProcessingModule\\EGUConverter.cs",
               "RelativeDocumentMoniker": "ProcessingModule\\EGUConverter.cs",
-              "ToolTip": "C:\\Users\\KorisniK\\Documents\\GitHub\\AUS_projekat4\\dcom-radna-verzija\\dCom\\ProcessingModule\\EGUConverter.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\OneDrive\\Desktop\\AUS_projekat4\\dcom-radna-verzija\\dCom\\ProcessingModule\\EGUConverter.cs",
               "RelativeToolTip": "ProcessingModule\\EGUConverter.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAzwBsAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-10T17:08:33.169Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-10T17:08:33.169Z"
             }
           ]
         }

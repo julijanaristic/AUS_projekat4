@@ -44,8 +44,6 @@ namespace Modbus.ModbusFunctions
         {
             Dictionary<Tuple<PointType, ushort>, ushort> dictionary = new Dictionary<Tuple<PointType, ushort>, ushort>();
 
-            ModbusWriteCommandParameters writeParams = (ModbusWriteCommandParameters)CommandParameters;
-
             ushort address = (ushort)((response[8] << 8) | response[9]);
 
             ushort value = (ushort)((response[10] << 8) | response[11]);

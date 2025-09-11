@@ -1,0 +1,6 @@
+STA 55
+TCP 503
+
+DO_REG  2 3000 0 0 1	0 DO @Start				#    # # #        #  1 #   #  #
+DO_REG  4 4000 0 0 1	0 DO @Ventil			#    # # #        #  1 #   #  #
+HR_INT  1 1000 0 0 4095 0 AO @KolicinaSastojaka 5    1 0 450	  10 # 350 50 #

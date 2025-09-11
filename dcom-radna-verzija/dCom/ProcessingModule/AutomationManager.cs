@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading;
+using System.Xml.Schema;
 
 namespace ProcessingModule
 {
@@ -73,17 +74,21 @@ namespace ProcessingModule
 
 			List<PointIdentifier> pointList = new List<PointIdentifier> { analogOut, digitalOut1, digitalOut2, digitalOut3, digitalOut4, digitalOut5, digitalOut6};
 
-			int motortTimer = 0;
+            //DateTime startTime = DateTime.UtcNow;
+            int chocolate = 50;
+            int milk = 50;
+            int water = 30;
+            int motorTimer = 0;
 
-			while (!disposedValue)
+            while (!disposedValue)
 			{
 				List<IPoint> points = storage.GetPoints(pointList);
-				int initValue = (int)eguConverter.ConvertToEGU(points[0].ConfigItem.ScaleFactor, points[0].ConfigItem.Deviation, points[0].RawValue); // pogledati posljednji parametar
+				int initValue = (int)eguConverter.ConvertToEGU(points[0].ConfigItem.ScaleFactor, points[0].ConfigItem.Deviation, points[0].RawValue);
 				int value = initValue;
 
 				if (points[1].RawValue == 1)
 				{
-					if (points[3].RawValue != 1)
+					if ((points[2].RawValue != 1 && points[3].RawValue != 1 && points[4].RawValue != 1 && points[5].RawValue != 1 && points[6].RawValue != 1))
 					{
 						processingManager.ExecuteWriteCommand(points[3].ConfigItem, configuration.GetTransactionId(), configuration.UnitAddress, 4000, 1);
 					}
@@ -124,21 +129,24 @@ namespace ProcessingModule
 						if (points[2].RawValue != 1)
 						{
                             processingManager.ExecuteWriteCommand(points[2].ConfigItem, configuration.GetTransactionId(), configuration.UnitAddress, 3001, 1);
+							//startTime = DateTime.UtcNow;
                         }
                     }
 
 					if (points[2].RawValue != 0)
 					{
-						motortTimer++;
-						if(motortTimer == 10)
+						//TimeSpan elapsed = DateTime.UtcNow - startTime;
+						//if (elapsed.TotalSeconds >= 10)
+						motorTimer++;
+						if(motorTimer == 20)
 						{
                             processingManager.ExecuteWriteCommand(points[2].ConfigItem, configuration.GetTransactionId(), configuration.UnitAddress, 3001, 0);
-                            motortTimer = 0;
 
-							if (points[6].RawValue != 1)
+                            if (points[6].RawValue != 1)
 							{
                                 processingManager.ExecuteWriteCommand(points[6].ConfigItem, configuration.GetTransactionId(), configuration.UnitAddress, 4003, 1);
-                            }
+								motorTimer = 0;
+							}
                         }
 						if (points[3].RawValue != 0 || points[4].RawValue != 0 || points[5].RawValue != 0)
 						{
@@ -166,42 +174,25 @@ namespace ProcessingModule
                         if (value == 0)
 						{
                             processingManager.ExecuteWriteCommand(points[6].ConfigItem, configuration.GetTransactionId(), configuration.UnitAddress, 4003, 0);
-                        }
+						}
                     }
 
-                    int chocolate = 50;
-                    int milk = 50;
-                    int water = 30;
-
-                    if (points[3].RawValue == 1)
+                    if (points[3].RawValue == 1 && value < 100)
                     {
                         value += chocolate;
                     }
-                    else if (points[4].RawValue == 1)
+                    else if (points[4].RawValue == 1 && value < 250)
                     {
                         value += milk;
                     }
-                    else if (points[5].RawValue == 1)
+                    else if (points[5].RawValue == 1 && value < 370)
                     {
                         value += water;
                     }
 
 					if (value != initValue) {
-						value = (int)eguConverter.ConvertToRaw(points[0].ConfigItem.ScaleFactor, points[0].ConfigItem.Deviation, points[0].RawValue);
+						value = (int)eguConverter.ConvertToRaw(points[0].ConfigItem.ScaleFactor, points[0].ConfigItem.Deviation, value);
                         processingManager.ExecuteWriteCommand(points[0].ConfigItem, configuration.GetTransactionId(), configuration.UnitAddress, 1000, value);
-                    }
-
-					if(value > points[0].ConfigItem.HighLimit)
-					{
-						if (points[3].RawValue != 0)
-							processingManager.ExecuteWriteCommand(points[3].ConfigItem, configuration.GetTransactionId(), configuration.UnitAddress, 4000, 0);
-						if (points[4].RawValue != 0)
-							processingManager.ExecuteWriteCommand(points[4].ConfigItem, configuration.GetTransactionId(), configuration.UnitAddress, 4001, 0);
-						if (points[5].RawValue != 0)
-							processingManager.ExecuteWriteCommand(points[5].ConfigItem, configuration.GetTransactionId(), configuration.UnitAddress, 4002, 0);
-
-						if (points[6].RawValue != 1)
-							processingManager.ExecuteWriteCommand(points[6].ConfigItem, configuration.GetTransactionId(), configuration.UnitAddress, 4003, 1);
                     }
 
                     automationTrigger.WaitOne(1000);
